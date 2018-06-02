@@ -5,4 +5,57 @@
 body {
     margin: 0;
     font-family: calibri;
+    height: 100vh;
+}
+
+.snake-game-outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+    .snake-game-inner {
+        height: 500px;
+        width: 500px;
+        border: 2px solid #333333;
+        box-shadow: inset 0px 0px 5px #333;
+    }
+}
+
+.snake-game-inner {
+    position: relative;
+    margin: auto;
+    .snake {
+        position: absolute;
+        span {
+            height: 8px;
+            width: 8px;
+            background: red;
+            display: inline-block;
+            border-radius: 100%;
+            margin-right: -2px
+        }
+    }
+    .buttons {
+        height: 130px;
+        width: 130px;
+        border: 1px solid #333;
+        position: absolute;
+        left: 100%;
+        top: calc(100% - 128px);
+        div {
+            float: left;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+            padding-top: 23px;
+            transition: .1s;
+            &:hover {
+                background: rgba(#333, 0.3);
+            }
+            &:active {
+                padding-top: 25px;padding-left: 10px;
+            }
+        }
+    }
 }

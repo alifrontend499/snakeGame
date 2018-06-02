@@ -1,5 +1,16 @@
 * { box-sizing: border-box; }
 
-body { margin: 0; font-family: calibri; }
+body { margin: 0; font-family: calibri; height: 100vh; }
+
+.snake-game-outer { display: table; height: 100%; width: 100%; }
+.snake-game-outer .snake-game-inner { height: 500px; width: 500px; border: 2px solid #333333; box-shadow: inset 0px 0px 5px #333; }
+
+.snake-game-inner { position: relative; margin: auto; }
+.snake-game-inner .snake { position: absolute; }
+.snake-game-inner .snake span { height: 8px; width: 8px; background: red; display: inline-block; border-radius: 100%; margin-right: -2px; }
+.snake-game-inner .buttons { height: 130px; width: 130px; border: 1px solid #333; position: absolute; left: 100%; top: calc(100% - 128px); }
+.snake-game-inner .buttons div { float: left; width: 50%; height: 50%; text-align: center; border: 1px solid #333; cursor: pointer; padding-top: 23px; transition: .1s; }
+.snake-game-inner .buttons div:hover { background: rgba(51, 51, 51, 0.3); }
+.snake-game-inner .buttons div:active { padding-top: 25px; padding-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
