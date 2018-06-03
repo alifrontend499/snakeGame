@@ -25,13 +25,19 @@ body {
     margin: auto;
     .snake {
         position: absolute;
+        line-height: 0;
+        left: 0px;
+        top: 0px;
         span {
             height: 8px;
             width: 8px;
-            background: red;
+            background: gray;
             display: inline-block;
             border-radius: 100%;
-            margin-right: -2px
+            margin-right: -2px;
+            &.first {
+                background-color: #333;
+            }
         }
     }
     .buttons {
@@ -54,7 +60,8 @@ body {
                 background: rgba(#333, 0.3);
             }
             &:active {
-                padding-top: 25px;padding-left: 10px;
+                padding-top: 25px;
+                padding-left: 10px;
             }
         }
     }
